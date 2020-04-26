@@ -32,7 +32,7 @@ $ kubectl create -f minikube/jenkins-pvc.yaml
 
 Execute helm:
 ```
-$ helm install --name jenkins -f helm/jenkins-values.yaml stable/jenkins --namespace jenkins-project
+$ helm install jenkins stable/jenkins -f helm/jenkins-values.yaml --set persistence.existingClaim=jenkins-pvc --namespace jenkins-project
 ```
 
 
