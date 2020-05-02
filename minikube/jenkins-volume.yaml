@@ -6,7 +6,7 @@ metadata:
 spec:
   storageClassName: jenkins-pv
   accessModes:
-    - ReadWriteOnce
+    - ReadWriteMany
   capacity:
     storage: 20Gi
   persistentVolumeReclaimPolicy: Retain

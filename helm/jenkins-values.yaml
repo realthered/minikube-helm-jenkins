@@ -11,7 +11,7 @@
 master:
   name: jenkins-master
   image: "jenkins/jenkins"
-  imageTag: "2.141"
+  imageTag: "2.190.1"
   imagePullPolicy: "Always"
   component: "jenkins-master"
   useSecurity: true
@@ -53,7 +53,7 @@ master:
 agent:
   enabled: true
   image: jenkins/jnlp-slave
-  imageTag: 3.10-1
+  imageTag: 4.3-4
   component: "jenkins-slave"
   privileged: false
   cpu: "200m"
@@ -78,7 +78,7 @@ persistence:
   storageClass: jenkins-pv
 
   annotations: {}
-  accessMode: ReadWriteOnce
+  accessMode: ReadWriteMany
   size: 20Gi
   volumes:
   #  - name: nothing
